@@ -4,9 +4,6 @@
 
 An advanced news aggregator and summarizer that leverages Selenium for dynamic web scraping and Google's Gemini AI for intelligent, multi-document analysis. The application features a user-friendly web interface built with Gradio.
 
-![App Screenshot](https://raw.githubusercontent.com/Arshad0220/news-summarizer-ai/main/demo-screenshot.png)
-*(Note: You will need to add your own screenshot named `demo-screenshot.png` to the repository for this image to display).*
-
 ## Features
 
 -   **Dynamic Content Scraping**: Uses Selenium to control a real web browser, ensuring it can parse content from modern, JavaScript-heavy websites.
