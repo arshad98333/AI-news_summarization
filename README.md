@@ -93,7 +93,7 @@ You are now ready to launch the Gradio web interface.
 python main.py
 ```
 
-After a few moments, the terminal will display a local URL, typically `http://127.0.0.1:7860`. Open this URL in your web browser to use the News Summarizer AI.
+After a few moments, the terminal will display a local URL, typically `http://12.0.0.1:7860`. Open this URL in your web browser to use the News Summarizer AI.
 
 ---
 
@@ -105,10 +105,10 @@ A brief overview of the key files in this project.
 /news-summarizer-ai
 ├── .env                  # (Local Only) Stores your secret API key.
 ├── .gitignore            # Specifies files for Git to ignore (like .env and venv).
-├── Dockerfile            # Instructions for building the container for deployment.
 ├── LICENSE               # The MIT License for the project.
 ├── README.md             # This documentation file.
 ├── requirements.txt      # List of Python package dependencies.
+├── packages.txt          # System-level dependencies for Hugging Face deployment.
 ├── config.py             # Loads and validates the API key from .env.
 ├── main.py               # The main entry point; builds the Gradio UI.
 ├── scraper.py            # Contains the Selenium logic for dynamic web scraping.
@@ -118,7 +118,16 @@ A brief overview of the key files in this project.
 
 ## Deployment
 
-This application is ready for deployment on services like Hugging Face Spaces. The included `Dockerfile` ensures a reproducible and correct build environment.
+This application is ready for deployment on services like Hugging Face Spaces. For deployment, a `packages.txt` file is required to instruct the server to install necessary system-level software for Selenium.
+
+Create a file named `packages.txt` in the root of the project with the following content:
+
+```text
+chromium
+libgl1
+```
+
+You can then use the `gradio deploy` command to push your application to a public Space.
 
 ## License
 
