@@ -113,19 +113,6 @@ A brief overview of the key files in this project.
 └── utils.py              # Helper functions, such as duplicate detection.
 ```
 
-## Deployment
-
-This application is ready for deployment on services like Hugging Face Spaces. For deployment, a `packages.txt` file is required to instruct the server to install necessary system-level software for Selenium.
-
-Create a file named `packages.txt` in the root of the project with the following content:
-
-```text
-chromium
-libgl1
-```
-
-You can then use the `gradio deploy` command to push your application to a public Space.
-
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
