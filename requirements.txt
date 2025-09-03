@@ -1,0 +1,6 @@
+gradio
+selenium
+webdriver-manager
+beautifulsoup4
+python-dotenv
+google-generativeai
